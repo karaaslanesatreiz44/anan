@@ -8,7 +8,6 @@ const cfg = require("./config.json");
 
 client.on("ready", async () => {
     client.user.setActivity(cfg.activity)
-    client.user.setStatus(cfg.status)
     console.log("Shelby Anamı Siktin Yeter Artık Amk Çocu")
 })
 
