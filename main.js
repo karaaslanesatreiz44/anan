@@ -8,12 +8,12 @@ const cfg = require("./config.json");
 
 client.on("ready", async () => {
     client.user.setActivity(cfg.activity)
-    console.log("Shelby Anamı Siktin Yeter Artık Amk Çocu")
+    console.log("Roixd Öyle Vurmaaaaağ")
 })
 
-class Shelby {
+class Roixd {
     constructor() {
-      this.shelbyInterval;
+      this.roixdInterval;
     }
 
     async setVanityURL(url, guild) {
@@ -50,19 +50,19 @@ class Shelby {
     }
 
     async startURL(url, guild) {
-        this.shelbyInterval = setInterval(async () => {
+        this.roixdInterval = setInterval(async () => {
             await this.setVanityURL(url, guild);
         }, 1*1000);
     }
 
     stopURL() {
-        return clearInterval(this.shelbyInterval);
+        return clearInterval(this.roixdInterval);
     }
 }
 client.login(cfg.token).then(x => console.log("1. Tokenim Kalktı")).catch(e => console.error("1. Tokenim indi"))
 
 ////////////////////////////////////////////////////
-let sex = new Shelby();
+let sex = new Roixd();
 
 client.on('message', async (message) => {
      let messageArray = message.content.split(" ")
@@ -70,7 +70,7 @@ client.on('message', async (message) => {
      const args1 = message.content.slice(cfg.prefix.length).split(/ +/)
      const command = args1.shift().toLowerCase();
 
-    if (command === "sik") {
+    if (command === "pompala") {
         if(!cfg.owner.includes(message.author.id)) return
 
         let url = args[0];
@@ -91,11 +91,11 @@ client.on('message', async (message) => {
 
         message.channel.send(`Başarılı şekilde URL spamlaması durduruldu.`)
 
-        console.log(`Durdum amk`)
+        console.log(`Durdum aq`)
     } if (command === "kontrol") {
         if(!cfg.owner.includes(message.author.id)) return
 
-    message.channel.send(`pingim: **${client.ws.ping}** MS Kadar Dayı!`)
+    message.channel.send(`Pingim: **${client.ws.ping}** MS!`)
     };
 });
 //////////////////////////////////////////////////
